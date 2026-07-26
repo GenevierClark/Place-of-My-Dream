@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BattleArea.cpp" />
+    <ClCompile Include="CozySnake.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="RestArea.cpp" />
     <ClCompile Include="Room.cpp" />
@@ -149,6 +150,9 @@
   <ItemGroup>
     <ClInclude Include="BattleArea.h" />
     <ClInclude Include="Character.h" />
+    <ClInclude Include="CozySnake.h" />
+    <ClInclude Include="GlobalSet.h" />
+    <ClInclude Include="Monster.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="RestArea.h" />
     <ClInclude Include="Room.h" />

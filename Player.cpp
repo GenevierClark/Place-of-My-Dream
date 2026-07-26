@@ -12,9 +12,9 @@ void Player::SetSleepDepth(int _sleepdepth)
 
 void Player::SetHealth(int _health)
 {
-	Health = _health;
-	if (Health > MaxHealth)
-		Health = MaxHealth;
-	else if (Health < 0)
-		Health = 0;
+	Character::SetHealth(_health);
+	if (GetHealth() > GetMaxHealth())
+		Character::SetHealth(GetMaxHealth());
+	else if (GetHealth() < 0)
+		Character::SetHealth(0);
 }
