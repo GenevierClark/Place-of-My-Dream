@@ -44,7 +44,9 @@
 
 \- 기획 논의 히스토리: docs/devlog.md
 
+\- 코드 구현 중 질문/리뷰/학습 기록: docs/dev\_journal.md (재학습용, 상세히 기록할 것)
+
 \- IDE: Visual Studio 2026
 
-\- 코드 작성 시작됨: Room(추상 클래스) 및 하위 클래스(RestArea, BattleArea, StoreArea) 기본 골격 작성 중 (Day 2)
+\- 코드 작성 시작됨: Room(추상 클래스) 및 하위 클래스(RestArea, BattleArea, StoreArea) 기본 골격 작성 중, Character/Player 클래스 작성 중 (Day 3)
 
