@@ -17,6 +17,7 @@ void RestArea::ApplyHealthRecovery(Player & _player, int _amount)
 void RestArea::IncreaseMaxHealth(Player& _player, int _amount)
 {
 	_player.SetMaxHealth(_player.GetMaxHealth() + _amount);
+	_player.SetHealth(_player.GetHealth() + _amount);
 }
 
 bool RestArea::EnterEvent(Player& _player)

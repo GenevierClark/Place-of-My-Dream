@@ -3,9 +3,18 @@
 
 #include <iostream>
 
+#include "Character.h"
+#include "Player.h"
+#include "Room.h"
+#include "RestArea.h"
+
 int main()
 {
-    std::cout << "Hello World!\n";
+	Player player;
+	RestArea restArea;
+	std::cout << "Before HP :" << player.GetHealth() << std::endl;
+	restArea.EnterEvent(player);
+	std::cout << "After HP :" << player.GetHealth() << std::endl;
 }
 
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
