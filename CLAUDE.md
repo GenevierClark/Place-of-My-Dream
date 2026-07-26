@@ -48,5 +48,5 @@
 
 \- IDE: Visual Studio 2026
 
-\- 코드 작성 시작됨: Room(추상 클래스) 및 하위 클래스(RestArea, BattleArea, StoreArea) 기본 골격 작성 중, Character/Player 클래스 작성 중 (Day 3)
+\- 코드 진행 상황: Room(추상) + RestArea 완성(테스트 검증 완료), BattleArea/StoreArea는 아직 스텁. Character/Player 클래스 완성. Monster(추상) + 첫 구체 몬스터 CozySnake 완성 (Action/Skill\_1~3/조건부 트리거 패턴 구현, 컴파일 에러 및 버그 다수 수정 완료). GameManager 등 중앙 매니저는 아직 미착수 (Day 3 종료 시점)
 
