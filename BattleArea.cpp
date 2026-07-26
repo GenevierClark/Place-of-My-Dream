@@ -19,11 +19,11 @@ bool BattleArea::EnterEvent(Player& _player)
 		case 1:
 			cout << "Preparing for battle..." << endl;
 			// Implement preparation logic here
-			break;
+			return true;
 		case 2:
 			cout << "Fighting the monster..." << endl;
 			// Implement battle logic here
-			break;
+			return true;
 		case 3:
 			cout << "Fleeing from battle..." << endl;
 			// Implement fleeing logic here
@@ -33,5 +33,4 @@ bool BattleArea::EnterEvent(Player& _player)
 			break;
 		}
 	}
-    return true;
 }

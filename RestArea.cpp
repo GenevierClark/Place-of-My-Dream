@@ -19,12 +19,12 @@ bool RestArea::EnterEvent(Player& _player)
 			cout << "Recovering sleep depth..." << endl;
 			// Implement sleep depth recovery logic here
 			RestArea::ApplySleepDepthRecovery(_player, GetSleepDepthRecoveryAmount());
-			break;
+			return true;
 		case 2:
 			cout << "Recovering health..." << endl;
 			// Implement health recovery logic here
 			RestArea::ApplyHealthRecovery(_player, GetHealthRecoveryAmount());
-			break;
+			return true;
 		case 3:
 			cout << "Exiting Rest Area..." << endl;
 			return false;
@@ -33,5 +33,4 @@ bool RestArea::EnterEvent(Player& _player)
 			break;
 		}
 	}
-	return false;
 }

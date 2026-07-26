@@ -17,11 +17,11 @@ bool StoreArea::EnterEvent(Player& _player)
 		case 1:
 			cout << "Buying items..." << endl;
 			// Implement buying logic here
-			break;
+			return true;
 		case 2:
 			cout << "Selling items..." << endl;
 			// Implement selling logic here
-			break;
+			return true;
 		case 3:
 			cout << "Exiting Store..." << endl;
 			return false;
@@ -30,5 +30,4 @@ bool StoreArea::EnterEvent(Player& _player)
 			break;
 		}
 	}
-    return true;
 }
