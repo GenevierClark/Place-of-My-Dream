@@ -14,7 +14,7 @@ public:
 
 	bool CheckSkillTrigger_1() override;
 public:
-	CozySnake() : Monster(12, 2, 0, 5, MonsterRank::Normal, Type::Illusion) {
+	CozySnake() : Monster(12, 2, 0, 5, MonsterRank::Normal, Type::Oblivion) {
 		SetName("Cozy Snake");
 		SetDescription("Beneath its plush exterior, an unsettling gaze pierces through you.");
 	}

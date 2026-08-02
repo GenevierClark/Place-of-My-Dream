@@ -35,6 +35,7 @@ public:
 	// Getter
 	std::string GetName() const { return Name; }
 	std::string GetDescription() const { return Description; }
+	int GetDreamFragmentsAmount() const { return MyDropTable.DreamFragments; }
 	// Setter
 	void SetName(const std::string& _name) { Name = _name; }
 	void SetDescription(const std::string& _description) { Description = _description; }

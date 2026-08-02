@@ -3,25 +3,24 @@
 #include <iostream>
 
 #include "Room.h"
+#include "Monster.h"
 
 class BattleArea : public Room {
 private:
 	// 해당 방에 있는 몬스터 데이터
-
-	// 현재 Round
-
-	// Reward Item
-
-	// Reward Gold
-	int RewardGold;
+	Monster* RoomMonster;
 
 public:
 	// Getter
-	int GetRewardGold() const { return RewardGold; }
+	Monster* GetRoomMonster() const { return RoomMonster; }
+	// Setter
+	void SetRoomMonster(Monster* _monster) { RoomMonster = _monster; }
 
 	bool EnterEvent(Player& _player) override;
+	void BattleSequence(Player& _player);
+
 public:
-	BattleArea() : RewardGold(100) {}
+	BattleArea(Monster* _monster) : RoomMonster(_monster) {}
 	~BattleArea() {}
 };
 

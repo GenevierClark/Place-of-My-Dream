@@ -48,5 +48,5 @@
 
 \- IDE: Visual Studio 2026
 
-\- 코드 진행 상황: Room(추상) + RestArea 완성(테스트 검증 완료), BattleArea/StoreArea는 아직 스텁. Character/Player 클래스 완성. Monster(추상) + 첫 구체 몬스터 CozySnake 완성 (Action/Skill\_1~3/조건부 트리거 패턴 구현, 컴파일 에러 및 버그 다수 수정 완료). GameManager 등 중앙 매니저는 아직 미착수 (Day 3 종료 시점)
+\- 코드 진행 상황 (Day 4, 2026-08-03 종료 시점): Room(추상) + RestArea 완성(테스트 검증 완료). Character/Player 클래스 완성 (Player::DreamFragments로 재화 필드명 통일). Monster(추상) + CozySnake 완성. BattleArea는 구조(진입 메뉴, 3단계 턴 루프, 몬스터 정보 조회) 완성됐지만 \*\*공격 시 실제 데미지 계산 로직은 아직 미구현\*\* — 다음 세션 최우선 작업. StoreArea는 아직 스텁. GameManager 등 중앙 매니저는 아직 미착수
 
