@@ -29,13 +29,13 @@ void CozySnake::Action(Player& _target)
 void CozySnake::Skill_1(Player& _target) 
 {
 	// 꼬리를 통한 공격으로 플레이어의 체력을 감소시키는 스킬
-	_target.SetHealth(_target.GetHealth() - 3); // 예시로 3만큼 체력 감소	
+	_target.TakeDamageHealth(GetAttackPower());
 }
 
 void CozySnake::Skill_2(Player & _target)
 {
 	// 플레이어의 수면 심도를 감소시키는 스킬
-	_target.SetSleepDepth(_target.GetSleepDepth() - 5); // 예시로 5만큼 수면 심도 감소
+	TakeDamageSleepDepth(_target, 5, false); // 예시로 수면 심도를 5 감소))
 }
 
 void CozySnake::Skill_3(Player& _target)

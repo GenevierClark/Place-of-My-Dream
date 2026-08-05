@@ -35,6 +35,7 @@ public:
 	// Getter
 	std::string GetName() const { return Name; }
 	std::string GetDescription() const { return Description; }
+	Type GetMonsterType() const { return MonsterType; }
 	int GetDreamFragmentsAmount() const { return MyDropTable.DreamFragments; }
 	// Setter
 	void SetName(const std::string& _name) { Name = _name; }
@@ -47,6 +48,8 @@ public:
 	virtual void Skill_2(Player& _target) = 0; // 수면 심도 관련 스킬을 정의하는 순수 가상 함수
 	virtual void Skill_3(Player& _target) = 0; // 조건부 스킬을 정의하는 순수 가상 함수
 	
+	virtual void TakeDamageSleepDepth(Player& _target, int _damage, bool _incOrdec); // 수면 심도 관련 피해를 처리하는 순수 가상 함수
+
 	virtual bool CheckSkillTrigger_1() { return Skill_Trigger_1; } // 조건부 스킬 발동 여부 확인
 
 public:

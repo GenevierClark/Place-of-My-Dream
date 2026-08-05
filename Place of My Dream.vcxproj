@@ -140,23 +140,30 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BattleArea.cpp" />
+    <ClCompile Include="Character.cpp" />
     <ClCompile Include="CozySnake.cpp" />
+    <ClCompile Include="FirstTypeSkill.cpp" />
+    <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="RestArea.cpp" />
     <ClCompile Include="Room.cpp" />
     <ClCompile Include="Place of My Dream.cpp" />
     <ClCompile Include="StoreArea.cpp" />
+    <ClCompile Include="Weapon.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BattleArea.h" />
     <ClInclude Include="Character.h" />
     <ClInclude Include="CozySnake.h" />
+    <ClInclude Include="FirstTypeSkill.h" />
     <ClInclude Include="GlobalSet.h" />
     <ClInclude Include="Monster.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="RestArea.h" />
     <ClInclude Include="Room.h" />
     <ClInclude Include="StoreArea.h" />
+    <ClInclude Include="Weapon.h" />
+    <ClInclude Include="WeaponSkill.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

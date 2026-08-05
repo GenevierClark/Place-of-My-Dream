@@ -18,3 +18,8 @@ void Player::SetHealth(int _health)
 	else if (GetHealth() < 0)
 		Character::SetHealth(0);
 }
+
+void Player::BaseAttack(Character& _target)
+{
+	
+}

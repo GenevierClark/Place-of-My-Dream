@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include <ctime>
 
 #include "Character.h"
 #include "Player.h"
@@ -10,6 +11,7 @@
 
 int main()
 {
+	srand(static_cast<unsigned int>(time(NULL))); // 시드 초기화
 	Player player;
 	RestArea restArea;
 	std::cout << "Before HP :" << player.GetHealth() << std::endl;
