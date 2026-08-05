@@ -20,7 +20,7 @@
 
 \- 노드 종류: 휴식처, 전투방, 엘리트 전투방, 상인의 방, 이벤트 방, 잠긴 문
 
-\- 5개 Map 클리어가 승리 조건. 몬스터는 1순위(조건부 인터럽트)/2순위(고정 사이클) 우선순위 AI. 전투는 기본 공격(무속성)/특수 스킬(속성, 심도 변동 코스트)/방어/도구 4커맨드. 감정 속성(자각→몽환→망각→자각 순환 상성, 약점 1.5배/역상성 0.5배, 최소데미지 1)
+\- 5개 Map 클리어가 승리 조건. 몬스터는 1순위(조건부 인터럽트)/2순위(고정 사이클) 우선순위 AI. 전투는 기본 공격(무속성)/특수 스킬(속성, 심도 변동 코스트)/방어/도구 4커맨드. 감정 속성(자각→몽환→망각→자각 순환 상성, 약점 2배/역상성 0.5배, 최소데미지 1) + 과수면(Hypersomnia, 하드모드 전용 4번째 속성, 특수 능력 미정)
 
 
 
@@ -48,5 +48,7 @@
 
 \- IDE: Visual Studio 2026
 
-\- 코드 진행 상황 (Day 4, 2026-08-03 종료 시점): Room(추상) + RestArea 완성(테스트 검증 완료). Character/Player 클래스 완성 (Player::DreamFragments로 재화 필드명 통일). Monster(추상) + CozySnake 완성. BattleArea는 구조(진입 메뉴, 3단계 턴 루프, 몬스터 정보 조회) 완성됐지만 \*\*공격 시 실제 데미지 계산 로직은 아직 미구현\*\* — 다음 세션 최우선 작업. StoreArea는 아직 스텁. GameManager 등 중앙 매니저는 아직 미착수
+\- 코드 진행 상황 (Day 4 종료 시점, 2026-08-03): Room(추상) + RestArea 완성. Character(TakeDamageHealth 가상함수)/Player(BaseAttack 스텁, 참조형으로 통일) 완성. Monster(추상, TakeDamageSleepDepth) + CozySnake 완성. 스킬을 별도 객체로 설계 — WeaponSkill(추상, Execute 순수가상) + FirstTypeSkill(구체, 속성 상성 반영 데미지 스킬, 버그 수정 완료) 완성. BattleArea는 구조만 있고 \*\*Attack 커맨드의 실제 데미지 계산 연결은 아직 미구현\*\* — 다음 세션 최우선 작업. StoreArea는 스텁. GameManager 등 중앙 매니저는 미착수.
+
+\- \*\*Weapon 재설계 방향 확정, 구현은 내일부터\*\*: `SynthesisType`(조합 전체 열거) 폐기하고 `Weapon`에 `BaseType` + `Type`(속성) + `std::string Name` 필드로 표현하기로 함 (유효 조합 여부·이름은 별도 데이터 테이블로 처리). `ModifierItemType`도 같은 이유로 폐기하고 `struct ModifierItemData { Name, Attribute, FloorTheme }` + 데이터 테이블 방식으로 재설계 예정. 아직 코드 미반영 — docs/dev\_journal.md 24\~25절 참고.
 
